@@ -8,12 +8,12 @@ function store (){ // stores items in the localStorage
     const message2 = document.getElementById('message2').value;
   
     const submitted = {
-      name: name,
+      name: names,
       email: email,
       message: message,
-      first_name: first_name,
-      last_name: last_name,
-      desktop_email: desktop_email,
+      first_name: firstName,
+      last_name: lastName,
+      desktop_email: desktopEmail,
       message2: message2,
     }
   
@@ -22,24 +22,24 @@ function store (){ // stores items in the localStorage
   }
   
   function retrieveRecords(){ // retrieves items in the localStorage
-    const key = document.getElementById('retrieveKey').vlue; // gets key from user
+    const key = document.getElementById('retrieveKey').value; // gets key from user
     console.log('retrive records');
-    const records = window.localStorage.getItem(ky); // searches for the key in localStorage
-    const paragraph = document.createElement('p')
+    const records = window.localStorage.getItem(key); // searches for the key in localStorage
+    const paragraph = document.createElement('p');
     const infor = document.createTextNode(records);
-    paragraph.appendChild(infor)
+    paragraph.appendChild(infor);
     const element = document.getElementById('retrieve');
     element.appendChild(paragraph);
   }
   
   function removeItem(){ // deletes item from localStorage
-    const key = document.getElementById('removeKey').vlue; // gets key from user
-    localStorage.removeItem(key) // passes key to the removeItem method
+    const key = document.getElementById('removeKey').value; // gets key from user
+    localStorage.removeItem(key); // passes key to the removeItem method
     console.log('remove items');
   }
   
   function clearStorage(){ // clears the entire localStorage
-    localStorage.clear()
+    localStorage.clear();
     console.log('clear records');
   }
   
